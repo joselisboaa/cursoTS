@@ -1,10 +1,10 @@
 export class Pessoa {
-  private _nome: string;
+  private static _nome: string;
   private readonly sobrenome: string;
   private readonly idade: number;
   private _cpf: string;
   constructor(nome: string, sobrenome: string, idade: number, cpf: string) {
-    this._nome = nome;
+    Pessoa._nome = nome;
     this.sobrenome = sobrenome;
     this.idade = idade;
     this._cpf = cpf;
@@ -15,6 +15,6 @@ export class Pessoa {
   }
 
   get nome() {
-    return this._nome;
+    return Pessoa._nome;
   }
 }
