@@ -4,6 +4,10 @@ type FilterCallback = <U>(
     array?: U[]
 ) => boolean;
 
+function identify<Type>(arg: Type) : Type {
+    return arg;
+};
+
 
 function myFilter<T>(array: T[], callbackfn: FilterCallback): T[] {
     const novoArray: T[] = [];
